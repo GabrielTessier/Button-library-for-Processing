@@ -27,13 +27,13 @@ java {
 // Such as:
 // <libName>.jar will be the name of your build jar
 // <libName>.zip will be the name of your release file
-val libName = "myLibrary"
+val libName = "ButtonManager"
 
 // The group ID of your library, which uniquely identifies your project.
 // It's often written in reverse domain name notation.
 // For example, if your website is "myDomain.com", your group ID would be "com.myDomain".
 // Replace "com.myDomain" with your own domain or organization name.
-group = "com.myDomain"
+group = "gabriel"
 
 // The version of your library. It usually follows semantic versioning (semver),
 // which uses three numbers separated by dots: "MAJOR.MINOR.PATCH" (e.g., "1.0.0").
@@ -53,7 +53,8 @@ version = "1.0.0"
 // listed as a contributed library, then one possible cause could be the sketchbook location
 // is wrong. You can check the sketchbook location in your Processing application preferences.
 var sketchbookLocation = ""
-val userHome = System.getProperty("user.home")
+//val userHome = System.getProperty("user.home")
+val userHome = "/home/gabriel"
 val currentOS = OperatingSystem.current()
 if(currentOS.isMacOsX) {
     sketchbookLocation = if (File("$userHome/Documents/Processing/sketchbook").isDirectory) {
@@ -77,7 +78,7 @@ if(currentOS.isMacOsX) {
 }
 // If you need to set the sketchbook location manually, uncomment out the following
 // line and set sketchbookLocation to the correct location
-// sketchbookLocation = "$userHome/sketchbook"
+sketchbookLocation = "$userHome/Documents/processing/sketchbook"
 
 
 // Repositories where dependencies will be fetched from.
